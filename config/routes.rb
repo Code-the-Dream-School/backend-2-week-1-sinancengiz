@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   resources :posts
   resources :pages
 
+  resources :posts do
+    resources :comments
+  end
+
+
   # Beow we create manually 7 conventional routs but above resources: pages doing smae job
   # get '/pages', to: 'pages#index'
   # get 'pages/new', to: 'pages#new', as: 'new_page'
